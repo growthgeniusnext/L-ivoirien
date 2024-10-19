@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livoirien</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.onload = function () {
+            alert("Bienvenue sur le site L'Ivoirien! Découvrez nos dernières actualités.");
+            typeWriter();
+            setInterval(typeWriter, 5000); // Refresh every 5 seconds
+            loadSection('accueil');
+        };
+
+        function typeWriter() {
+            let title = document.getElementById('dynamic-title');
+            let fullTitle = "Livoirien";
+            let i = 0;
+            title.innerHTML = ''; // Clear the title first
+            function write() {
+                if (i < fullTitle.length) {
+                    title.innerHTML += fullTitle.charAt(i);
+                    i++;
+                    setTimeout(write, 150);
+                }
+            }
+            write();
+        }
+
+        function loadSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function showAd() {
+            alert("Voici une publicité !");
+        }
+
+        setInterval(showAd, 30000); // Afficher une publicité toutes les 30 secondes
+    </script>
+</head>
+
+<body>
+    <div class="background-image"></div>
+    <header class="header">
+        <h1 id="dynamic-title"></h1>
+        <nav class="nav">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+            <div class="nav-menu">
+                <a href="#accueil" onclick="loadSection('accueil')">Accueil</a>
+                <a href="#politique" onclick="loadSection('politique')">Politique</a>
+                <a href="#religion" onclick="loadSection('religion')">Religion</a>
+                <a href="#sport" onclick="loadSection('sport')">Sport</a>
+                <a href="#societe" onclick="loadSection('societe')">Société</a>
+                <a href="#faits-divers" onclick="loadSection('faits-divers')">Faits Divers</a>
+                <a href="#divertissement" onclick="loadSection('divertissement')">Divertissement</a>
+            </div>
+        </nav>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="https://twitter.com" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="https://instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </header>
+    <section class="news-ticker">
+        <div class="marquee">
+            <p>Dernières nouvelles: Bienvenue sur notre site actualités. Nouvelles fraîches chaque jour !</p>
+        </div>
+    </section>
+    <main class="content">
+        <section id="accueil" class="section">
+            <h2>Actualité du Jour</h2>
+            <div class="news-grid">
+                <div class="news-box">Actualité 1</div>
+                <div class="news-box">Actualité 2</div>
+                <div class="news-box">Actualité 3</div>
+                <div class="news-box">Actualité 4</div>
+                <div class="news-box">Actualité 5</div>
+                <div class="news-box">Actualité 6</div>
+                <div class="news-box">Actualité 7</div>
+                <div class="news-box">Actualité 8</div>
+            </div>
+            <h2>Les 3 Dernières Actualités</h2>
+            <div class="news-grid">
+                <div class="news-box">Dernière Actualité 1</div>
+                <div class="news-box">Dernière Actualité 2</div>
+                <div class="news-box">Dernière Actualité 3</div>
+            </div>
+            <div class="partners">
+                <img src="logo1.png" alt="Logo Partenaire 1">
+                <img src="logo2.png" alt="Logo Partenaire 2">
+                <img src="logo3.png" alt="Logo Partenaire 3">
+            </div>
+        </section>
+        <section id="politique" class="section" style="display: none;">
+            <h2>Politique</h2>
+            <p>Les dernières nouvelles politiques en Côte d'Ivoire.</p>
+        </section>
+        <section id="religion" class="section" style="display: none;">
+            <h2>Religion</h2>
+            <p>Actualités et discussions autour des religions.</p>
+        </section>
+        <section id="sport" class="section" style="display: none;">
+            <h2>Sport</h2>
+            <p>Les mises à jour sportives récentes.</p>
+        </section>
+        <section id="societe" class="section" style="display: none;">
+            <h2>Société</h2>
+            <p>Les sujets de société en Côte d'Ivoire.</p>
+        </section>
+        <section id="faits-divers" class="section" style="display: none;">
+            <h2>Faits Divers</h2>
+            <p>Les nouvelles inattendues et diverses.</p>
+        </section>
+        <section id="divertissement" class="section" style="display: none;">
+            <h2>Divertissement</h2>
+            <p>Divertissements et actualités de la culture populaire.</p>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>L'Ivoirien - Site D'actualités. Tous droits Réservés.</p>
+    </footer>
+</body>
+
+</html>

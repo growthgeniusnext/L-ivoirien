@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport - L'Ivoirien</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Sport</h1>
+        <nav class="nav">
+            <a href="index.html">Accueil</a>
+            <a href="politique.html">Politique</a>
+            <a href="religion.html">Religion</a>
+            <a href="societe.html">Société</a>
+            <a href="faits-divers.html">Faits Divers</a>
+            <a href="divertissement.html">Divertissement</a>
+        </nav>
+    </header>
+    <main class="content">
+        <section class="box">
+            <h2>Dernières Mises à Jour Sportives</h2>
+            <p>Les mises à jour sportives récentes...</p>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>L'Ivoirien - Site D'actualités. Tous droits Réservés.</p>
+    </footer>
+</body>
+</html>
